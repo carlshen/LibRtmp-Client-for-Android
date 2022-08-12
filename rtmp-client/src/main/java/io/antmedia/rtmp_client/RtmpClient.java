@@ -1,11 +1,14 @@
 package io.antmedia.rtmp_client;
 
+import android.util.Log;
+
 import java.io.IOException;
 
 /**
  * Created by faraklit on 01.01.2016.
  */
 public class RtmpClient {
+    static String TAG = "RtmpClient";
 
     static {
         System.loadLibrary("rtmp-jni");
@@ -215,8 +218,10 @@ public class RtmpClient {
         if (rtmpPointer == 0) {
             throw new RtmpIOException(RtmpIOException.OPEN_ALLOC);
         }
+        Log.e(TAG, "nativeAlloc rtmpPointer = " + rtmpPointer);
         int result = nativeOpen(url, isPublishMode, rtmpPointer, sendTimeoutInMs,
             receiveTimeoutInMs);
+        Log.e(TAG, "nativeOpen result = " + result);
         if (result != RTMP_SUCCESS) {
             rtmpPointer = 0;
             throw new RtmpIOException(result);

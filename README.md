@@ -1,4 +1,7 @@
 # Librtmp Client for Android
+Add live page to push video frame content to the bili page.
+Thanks for the original library.
+
 It is probably the smallest(~60KB) rtmp client for android. It calls librtmp functions over JNI interface.
 With all cpu architectures(arm, arm7, arm8, x86, x86-64, mips) its size is getting about 300KB
 

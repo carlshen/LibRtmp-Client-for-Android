@@ -3,7 +3,6 @@ package io.antmedia.rtmp_client.test;
 import android.app.Activity;
 import androidx.test.rule.ActivityTestRule;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
-import android.test.suitebuilder.annotation.LargeTest;
 
 import io.antmedia.rtmp_client.RTMPMuxer;
 import io.antmedia.rtmp_client.RtmpClient;
@@ -22,7 +21,6 @@ import static junit.framework.Assert.assertTrue;
  */
 
 @RunWith(AndroidJUnit4.class)
-@LargeTest
 public class ApplicationTest {
 
     @Rule
